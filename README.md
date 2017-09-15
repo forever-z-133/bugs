@@ -1,3 +1,7 @@
+
+大段文字看起来眼睛好累，所以我随便按每10个进行一次分割。  
+如果你有更好的展现形式，欢迎投稿，非常感谢！
+
 # 记录一些我自己认为是BUG的坑眼
 
 * writing-mode:vertical-rl;在 Safari 上异常（无解，等于苹果浏览器不能玩耍了）
@@ -9,7 +13,10 @@
 * 苹果机有滚动反弹，与 position: fixed 一起玩耍时很可怕
 * clip:rect() 必须要和 absolute 合用，且 (1,2,3,4) 2&3 必须有(作为宽高)
 * scaleX 等的默认值是 0 不是 1，所以动画时会有一闪的状态
-* text-transform 有时会在跳页时回归最初，比如全部大写的跳页再回来会出现明显的小写变大写的过程（什么特定情况还未总结出）
+* text-transform 有时会在跳页时回归最初（什么特定情况还未总结出）
+
+-----
+
 * 极少部分苹果机图片加载会阻塞后续程序
 * 最好不要 for 里面套 ajax，不然你的服务器会超级崩溃的，当然浏览器也会报出请求过量的错误
 * overflow:hidden 在子级 transform 时无效，需要再套一层父级，有时子级的父级也无效，需要祖父级添加 overflow:hidden
@@ -20,6 +27,9 @@
 * iframe 套的网页会缓存，修改后刷新可能无效，且会保存 history，最好用一次就新建删除一次
 * 项目较大时，全局事件里面加 alert，容易产生混淆，如快速两次 click，第一次弹窗，第二次点击算什么呢
 * <datalist> 并不好用，有时会不出现内容，且样式不可控，不推荐使用
+
+-----
+
 * 苹果手机自动播放音频得放在 wx.ready 里面
 * 摇一摇事件有时清除不了，可能是触发太多烧机器，推荐再加个变量控制开关
 * onstorage 事件监听必须两个页面都打开着才能互传信息
@@ -30,6 +40,9 @@
 * 大部分苹果机微信支付后无法再横屏
 * 部分苹果机 window.orientation 不准，进去就是 90，多转几次又好了，所以最好还是使用宽高判断
 * setInterval 设置 document.title 效果非常不稳定，用 requestAnimationFrame 就好了
+
+-----
+
 * absolute 下的 offsetLeft 会以父级定位的相对位置来计算（可能有误，以后研究）
 * Object.assign 的 this 指向有待研究
 * 移动端同个 input[type="file"] 的 change 事件只触发一次
@@ -40,6 +53,9 @@
 * 函数传参时最后多打个逗号，PC正常显示，但在移动端把后续程序全部卡住
 * 在 Vue 实例元素内，自己 append 出来的元素是无法修改的
 * Vue.component 必须放在 new Vue 前面
+
+-----
+
 * svg 的 image 必须带宽高，否则 firefox 等浏览器不显示
 * input 弹出的虚拟键盘仅 number 有下一步这样的功能键
 * flex 下的 <img> 高度 auto 会失效，需 align-item: flex-start
