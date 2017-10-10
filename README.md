@@ -59,3 +59,7 @@
 * input 弹出的虚拟键盘仅 number 有下一步这样的功能键
 * flex 下的 `<img>` 高度 auto 会失效，需 align-item: flex-start
 * background 只支持 .svg 文件式的引用，无法使用 #xxx 代码式的引用
+* 多个 transition-property 会触发多次 transitionEnd
+* 多个 jquery 对象会触发多次动画回调，如 $('.x1, .x2').show(cb) 会触发两次 cb
+* 小程序的音频最好不要超过 8 个，不然总是有警告
+* 苹果机小程序背景音乐调不了音量
