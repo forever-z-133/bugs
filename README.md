@@ -5,18 +5,18 @@
 # 记录一些我自己认为是BUG的坑眼
 
 * `writing-mode:vertical-rl`;在 Safari 上异常（无解，等于苹果浏览器不能玩耍了）
-* `transform` 下的 `fixed` 失效，与 `absolute` 等效，反正能不用 fixed 绝不用
+* `translate3d` 下的 `fixed` 失效，与 `absolute` 等效，反正能不用 fixed 绝不用
 * `touchend` 或 `tap` 会出现事件穿透，其实浏览器已经做了优化，`click` 是可以满足我们的要求的。但拖拽里套点击，差异很大有待研究
 * 元素未显示时的 swiper 的初始化是有误的，`mySwiper.update()` 有效
 * 苹果机 `new Date(d)` 时 `d` 不能采用 "xxxx-xx-xx" 格式，必须分开成多个参数
-* `isplay:flex` 被 `display: none` 覆盖后再使用 jquery 的 `fadeIn()` 将显示 `display: block`
+* `display:flex` 被 `display: none` 覆盖后再使用 jquery 的 `fadeIn()` 将显示 `display: block`
 * 苹果机有滚动反弹，与 `position: fixed` 一起玩耍时很可怕
-* `clip:rect(1,2,3,4)` 必须要和 `absolute` 合用，且 2&3 必须有(作为宽高)，推荐使用 `clip-path`
-* `scaleX` 等的默认值是 0 不是 1，所以小心 css 动画时会有一闪的状态
+* `clip:rect(1,2,3,4)` 必须要和 `absolute` 合用，且 2&3 必须有(作为宽高)，更推荐使用 `clip-path`
+* `scaleX` 等的默认值是 0 不是 1，所以小心 css 动画时会有一闪的状态，虽然通常我们会用 `scale(x, y)` 更多
 
 -----
 
-* text-transform 有时会在跳页时回归最初（什么特定情况还未总结出）
+* `text-transform` 有时会在跳页时回归最初（什么特定情况还未总结出）
 * 极少部分苹果机图片加载会阻塞后续程序
 * 最好不要 for 里面套 ajax，不然你的服务器会超级崩溃的，当然浏览器也会报出请求过量的错误
 * overflow:hidden 在子级 transform 时无效，需要再套一层父级，有时子级的父级也无效，需要祖父级添加 overflow:hidden
@@ -37,8 +37,8 @@
 * 苹果机的渐变 transparent 可能会呈现为黑色，用 rgba(255,255,255,0) 解决
 * 苹果机 rotateY 问题超烦，旋转的一半后沉于 body 的背后不显示，需要 translateZ 来处理
 * 大部分苹果机微信支付后无法再横屏
-* 部分老牌机 window.orientation 不准，进去就是 90，多转几次又好了，所以最好还是使用宽高判断
-* setInterval 设置 document.title 效果非常不稳定，用 requestAnimationFrame 就好了
+* 部分老牌机 window.orientation 不准，进去就是 90，多转几次又好了，十分偶现
+* setInterval 设置 document.title 移动端效果非常不稳定，用 requestAnimationFrame 就好了
 
 -----
 
@@ -57,9 +57,9 @@
 
 * svg 的 image 必须带宽高，否则 firefox 等浏览器不显示
 * input 弹出的虚拟键盘仅 number 有下一步这样的功能键
-* flex 下的 `<img>` 高度 auto 会失效，需 align-item: flex-start
+* flex 下的 `<img width="50%">` 高度 auto 会失效，需 align-item: flex-start
 * background 只支持 .svg 文件式的引用，无法使用 #xxx 代码式的引用
-* 多个 transition-property 会触发多次 transitionEnd
+* 多个 transition-property 会触发多次 transitionEnd，注意 border / padding 会触发四次
 * 多个 jquery 对象会触发多次动画回调，如 $('.x1, .x2').show(cb) 会触发两次 cb
 * 小程序的音频最好不要超过 8 个，不然总是有警告
 * 苹果机小程序背景音乐调不了音量
