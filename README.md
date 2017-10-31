@@ -4,6 +4,11 @@
 
 # 记录一些我自己认为是BUG的坑眼
 
+* :not(.x):last-of-type 并不代表去掉 .x 后的最后一个，它们是或者关系而非并且关系
+* table-layout: fixed 表示不再自动分配宽度，傻逼的我还以为是固定 thead 达到类似 position:fixed 的效果
+
+-----
+
 * `writing-mode:vertical-rl`;在 Safari 上异常（无解，等于苹果浏览器不能玩耍了）
 * `translate3d` 下的 `fixed` 失效，与 `absolute` 等效，反正能不用 fixed 绝不用
 * `touchend` 或 `tap` 会出现事件穿透，其实浏览器已经做了优化，`click` 是可以满足我们的要求的。但拖拽里套点击，差异很大有待研究
