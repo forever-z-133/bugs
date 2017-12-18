@@ -4,6 +4,7 @@
 
 # 记录一些我自己认为是BUG的坑眼
 
+* 苹果机没有原生双击事件dblclick
 * :not(.x):last-of-type 并不代表去掉 .x 后的最后一个，它们是或者关系而非并且关系
 * table-layout: fixed 表示不再自动分配宽度，傻逼的我还以为是固定 thead 达到类似 position:fixed 的效果
 
