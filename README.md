@@ -4,6 +4,7 @@
 
 # 记录一些我自己认为是BUG的坑眼
 
+* 小程序的 toast 和 loading 等其实解决不了点击太快的问题，还得靠变量来阻止才行
 * inline 行级元素设置 transform 无效
 * 苹果机没有原生双击事件dblclick
 * :not(.x):last-of-type 并不代表去掉 .x 后的最后一个，它们是或者关系而非并且关系
