@@ -4,6 +4,7 @@
 
 # 记录一些我自己认为是BUG的坑眼
 
+* 写 HTML 时两个节点间有换行或空格，需要两次 previousSibling 才能找到上一个节点，因为中间多了一个空白的 text 节点
 * 小程序的 toast 和 loading 等其实解决不了点击太快的问题，还得靠变量来阻止才行
 * inline 行级元素设置 transform 无效
 * 苹果机没有原生双击事件dblclick
