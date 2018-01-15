@@ -4,6 +4,10 @@
 
 # 记录一些我自己认为是BUG的坑眼
 
+* 自写推文代码遇坑，svg 仅支持闭合标签（即 <rect></rect>），不支持 position
+* 粘贴功能 execCommand('paste') 被各家浏览器禁用掉了
+* 小程序的 cover-view 手机上不触发 touch 事件
+* 小程序的 cover-image 不能单独定位，如果父级 cover-view 定位了那倒可以了
 * 写 HTML 时两个节点间有换行或空格，需要两次 nextSibling 才能找到上一个节点，因为中间多了一个空白的 text 节点
 * 小程序的 toast 和 loading 等其实解决不了点击太快的问题，还得靠变量来阻止才行
 * inline 行级元素设置 transform 无效
