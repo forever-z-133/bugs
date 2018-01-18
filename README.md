@@ -4,6 +4,7 @@
 
 # 记录一些我自己认为是BUG的坑眼
 
+
 * 自写推文代码遇坑，svg 仅支持闭合标签（即 `<rect></rect>`），不支持 `position`
 * 粘贴功能 `execCommand('paste')` 被各家浏览器禁用掉了
 * 小程序的 `cover-view` 手机上不触发 touch 事件
@@ -78,3 +79,4 @@
 * 苹果机小程序背景音乐调不了音量
 * delete 只能删数组和对象里的键值，不能删除变量、函数和函数的参数。比如 `var a = 1; delete a; alert(a); // 2`
 * firefox 在 mask-size 小于 100% 时各种卡，大于时还行，不知怎么办
+* 微信放视频没有自动播放，需要点击触发。可见此 [教程](http://www.cnblogs.com/foreverZ/p/6038950.html)
