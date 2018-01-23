@@ -4,6 +4,10 @@
 
 # 记录一些我自己认为是BUG的坑眼
 
+* 小程序的 `cover-view` 不能使用 `:before` 和 `gradient` 样式
+* `disabled` 会禁掉 `mouse` 事件，却没有禁 `touch` 事件
+
+-----
 
 * 自写推文代码遇坑，svg 仅支持闭合标签（即 `<rect></rect>`），不支持 `position`
 * 粘贴功能 `execCommand('paste')` 被各家浏览器禁用掉了
