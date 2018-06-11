@@ -9,6 +9,7 @@
 * `$.fn.serializeArray` 方法会把回车 `\n` 改为 `\r\n`，增加了字符串长度
 * `Math.round` 四舍五入方法可能有误，见 [推文](https://mp.weixin.qq.com/s/MlnVE0_bWHVGb7MAPBBG1Q)
 * 看 [源码](https://blog.csdn.net/lixuepeng_001/article/details/53742589) 发现，Array.sort 是要返回正负，而非布尔值。
+* 浏览器开始禁止音频视频的自动播放，暂时无解
 
 -----
 
@@ -44,7 +45,7 @@
 * setTimeout("x()",500) 的 x 必须为全局函数，否则报错，所以还是用 setTimeout(x,500) 吧，同理 `<div onclick="aaa()">` 的 aaa 也必须是全局函数
 * 有些手机 `<audio>` 不支持 m4a 格式的音频
 * 禁用了 `window` 的 `touchstart` 后 `input` 也不能点了
-* 苹果机的 `blur` 有问题，有待实验
+* 苹果机的 `blur` 自主触发有问题，有待实验
 * `iframe` 套的网页会缓存，修改后刷新可能无效，且会保存 history，最好用一次就新建删除一次
 * `<datalist>` 并不好用，有时会不出现内容，且样式不可控，不推荐使用
 
