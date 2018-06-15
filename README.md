@@ -8,8 +8,9 @@
 * `disabled` 会禁掉 `mouse` 事件，却没有禁 `touch` 事件
 * `$.fn.serializeArray` 方法会把回车 `\n` 改为 `\r\n`，增加了字符串长度
 * `Math.round` 四舍五入方法可能有误，见 [推文](https://mp.weixin.qq.com/s/MlnVE0_bWHVGb7MAPBBG1Q)
-* 看 [源码](https://blog.csdn.net/lixuepeng_001/article/details/53742589) 发现，Array.sort 是要返回正负，而非布尔值。
+* 看 [源码](https://blog.csdn.net/lixuepeng_001/article/details/53742589) 发现，Array.sort 是要返回正负，而非布尔值
 * 浏览器开始禁止音频视频的自动播放，暂时无解
+* `<a><a>x</a></a>` 会被解析为 `<a></a><a>x</a>`，但 `appendChild` 的话可以嵌套
 
 -----
 
