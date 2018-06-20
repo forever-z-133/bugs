@@ -11,6 +11,7 @@
 * 看 [源码](https://blog.csdn.net/lixuepeng_001/article/details/53742589) 发现，`Array.sort` 是要返回正负，而非布尔值
 * 浏览器开始禁止音频视频的自动播放，暂时无解
 * `<a><a>x</a></a>` 会被解析为 `<a></a><a>x</a>`，但动态添加（append 或 innerHTML）的话可以嵌套
+* `location.origin` 在 IE11 以下不兼容
 
 -----
 
