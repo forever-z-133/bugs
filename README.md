@@ -4,13 +4,14 @@
 
 # 记录一些我自己认为是BUG的坑眼
 
+* 苹果机在纵向 `flex: 1` 时非常尴尬，有时 `flex-basis: 100%` 可行，有时必须定高。
 * 小程序的 `cover-view` 不能使用 `:before` 和 `gradient` 样式
 * `disabled` 会禁掉 `mouse` 事件，却没有禁 `touch` 事件
 * `$.fn.serializeArray` 方法会把回车 `\n` 改为 `\r\n`，增加了字符串长度
 * `Math.round` 四舍五入方法可能有误，见 [推文](https://mp.weixin.qq.com/s/MlnVE0_bWHVGb7MAPBBG1Q)
 * 看 [源码](https://blog.csdn.net/lixuepeng_001/article/details/53742589) 发现，`Array.sort` 是要返回正负，而非布尔值
 * 浏览器开始禁止音频视频的自动播放，暂时无解
-* `<a><a>x</a></a>` 会被解析为 `<a></a><a>x</a>`，但动态添加（append 或 innerHTML）的话可以嵌套
+* `<a><a>x</a></a>` 会被解析为 `<a></a><a>x</a>`，但动态添加（append 或 innerHTML）的话可以嵌套, p>div | p>p 也是如此。
 * `location.origin` 在 IE11 以下不兼容
 
 -----
