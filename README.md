@@ -12,6 +12,7 @@
 * 看 [源码](https://blog.csdn.net/lixuepeng_001/article/details/53742589) 发现，`Array.sort` 是要返回正负，而非布尔值
 * 浏览器开始禁止音频视频的自动播放，暂时无解
 * `<a><a>x</a></a>` 会被解析为 `<a></a><a>x</a>`，但 `append` 的话可以嵌套, p>div | p>p 也是如此。
+* jquery 在 table 中 html 个 table 会无效，append 个 table 有时报错，[源码](https://blog.csdn.net/chaiyining007/article/details/8213699)。
 * `location.origin` 在 IE11 以下不兼容
 
 -----
