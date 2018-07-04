@@ -4,6 +4,10 @@
 
 # 记录一些我自己认为是BUG的坑眼
 
+* 正则的括号会在 `match` 时再单独提取出来一份，比如 `"ab".match(/(b)/)` 会得到 `["b","b"]`。
+
+-----
+
 * 苹果机在纵向 `flex: 1` 时非常尴尬，有时 `flex-basis: 100%` 可行，有时必须定高。
 * 小程序的 `cover-view` 不能使用 `:before` 和 `gradient` 样式
 * `disabled` 会禁掉 `mouse` 事件，却没有禁 `touch` 事件
