@@ -5,6 +5,7 @@
 # 记录一些坑眼
 
 * 正则的括号会在 `match` 时再单独提取出来一份，比如 `"ab".match(/(b)/)` 会得到 `["b","b"]`
+* `$('body')` 和 `$(document).on('click', 'x')` 在苹果机上不触发，但 `$(window)` 可以，给 `x` 添加 `cursor:pointer;` 也可行
 
 -----
 
