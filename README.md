@@ -4,7 +4,7 @@
 
 # 记录一些坑眼
 
-* 给**定位**的 `body` 设 `background-size`，如 `100% 100%` 或 `contain` 会没有高度，但 `cover` 有效。
+* 给**定位**的 `body` 设 `background-size`，如 `100% 100%` 或 `contain` 会没有相对高度，但 `cover` 有效。
 * 正则的括号会在 `match` 时再单独提取出来一份，比如 `"ab".match(/(b)/)` 会得到 `["b","b"]`
 * 苹果机上当 `div` 的 `click` 委托在 `document` 或 `body` 上会无法点击，可换为 `a` 或添加 `cursor: pointer` 等。[见文](https://www.cnblogs.com/Steping/p/5737547.html)
 * 苹果机移动端 `contenteditable` 无效，需加上 `-webkit-user-select: text`
