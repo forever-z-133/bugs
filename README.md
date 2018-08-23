@@ -4,7 +4,7 @@
 
 # 记录一些坑眼
 
-* `new RegExp` 需对特殊字符进行转义，比如 `new RegExp('\\d').test(1)` 才有用，好是 `/\d/.test(1)` 好呀。
+* `new RegExp` 需对特殊字符进行转义，比如 `new RegExp('\\d').test(1)` 才有效，还是 `/\d/.test(1)` 好呀。
 * 设置 `border-image` 后，`border-radius` 失效。
 * 给**定位**的 `body` 设 `background-size`，如 `100% 100%` 或 `contain` 会没有相对高度，但 `cover` 有效。
 * 正则的括号会在 `match` 时再单独提取出来一份，比如 `"ab".match(/(b)/)` 会得到 `["b","b"]`
