@@ -4,6 +4,7 @@
 
 # 记录一些坑眼
 
+* 点击在 `label[for]` 的父级上，会触发两次 `click`，很迷
 * IOS will only allow focus to be triggered on other elements
 * `new RegExp` 需对特殊字符进行转义，比如 `new RegExp('\\d').test(1)` 才有效，还是 `/\d/.test(1)` 好呀。
 * 设置 `border-image` 后，`border-radius` 失效。
