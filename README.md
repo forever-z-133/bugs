@@ -4,7 +4,7 @@
 
 # 记录一些坑眼
 
-* 有 `mask` 的元素 `box-shadow` 非 `inset` 形态无效
+* 有 `mask` 的元素 `box-shadow` 非 `inset` 形态无效，`filter:drop-shadow()` 也是如此（可放到父级去）
 * IOS 上给 `translate3d` 新 `innerHTML` 后效果消失
 
 -----
