@@ -4,7 +4,11 @@
 
 # 记录一些坑眼
 
+* 有 `mask` 的元素 `box-shadow` 非 `inset` 形态无效
 * IOS 上给 `translate3d` 新 `innerHTML` 后效果消失
+
+-----
+
 * https 下无法点击打开下载 http 的资源
 * `input[type="file"]` 的触发会触发 `window.onblur` 事件，可用 `document.activeElement` 来进行排除
 * 点击在 `label[for]` 的父级上，会触发两次 `click`，很迷
