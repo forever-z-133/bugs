@@ -4,7 +4,8 @@
 
 # 记录一些坑眼
 
-* elementUI 的 daterange 在 **火狐** 下不支持 `yyyy.MM.dd` 格式数据的传入，其他 `-/` 都是可以的
+* 小程序覆盖在 input 上的元素，键盘弹起后，点击就无法触发了
+* ElementUI 的 `el-date-picker[type="daterange"]` 在 **火狐** 下不支持 `yyyy.MM.dd` 格式数据的传入，`-/` 可以
 * 有 `mask` 的元素 `box-shadow` 非 `inset` 形态无效，`filter:drop-shadow()` 也是如此（可放到父级去）
 * IOS 上给 `translate3d` 新 `innerHTML` 后效果消失
 
