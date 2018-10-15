@@ -4,6 +4,7 @@
 
 # 记录一些坑眼
 
+* `isNaN` 会先 `Number` 转数字，所以不准确，如 `isNaN('NaN')` 会得到 `NaN` 所以结果为 `true`，推荐用 `Number.isNaN`
 * 小程序覆盖在 input 上的元素，键盘弹起后，点击就无法触发了
 * ElementUI 的 `el-date-picker[type="daterange"]` 在 **火狐** 下不支持 `yyyy.MM.dd` 格式数据的传入，`-/` 可以
 * 有 `mask` 的元素 `box-shadow` 非 `inset` 形态无效，`filter:drop-shadow()` 也是如此（可放到父级去）
