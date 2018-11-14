@@ -4,6 +4,7 @@
 
 # 记录一些坑眼
 
+* `justify-content` 和子级 `margin: auto;` 合用时，效果很奇妙，比如两个子级时中间有 margin 的自动空隙
 * `<script src="xx.js" />` 不能使用单标签格式，不然会把后面的都当做 js 代码
 * `JSON.stringify({x: function(){}})` 会得到 `"{}"`，不支持函数的字符串化
 * 属性选择器 `[id=value]` 中当 value 中有小数点时会报错，保险起见还是带双引号更好 `[id="value"]`
