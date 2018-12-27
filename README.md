@@ -4,10 +4,11 @@
 
 # 记录一些坑眼
 
+* 父级 `overflow:auto; position:relative;`，子级绝对定位并超出，结果会显示滚动条，并非完全脱离文档流
 * 父级无高度时，子级 `position: relative` 的百分比定位 `top: 50%` 会无效
 * ueditor 插件初始化时会触发 `hashchange` 事件，希望你在这里面没有写什么操作
 * `display: flex` 和子级 `margin: auto;` 合用时，效果很奇妙，比如居中/两个子级的自动空隙等
-* `<script src="xx.js" />` 不能使用单标签格式，不然会把后面的都当做 js 代码
+* `<script src="xx.js" />` 不能使用单标签格式，不然会把后面的都当做文本
 * `JSON.stringify({x: function(){}})` 会得到 `"{}"`，不支持函数的字符串化
 * 属性选择器 `[id=value]` 中当 value 中有小数点时会报错，保险起见还是带双引号更好 `[id="value"]`
 * 小程序覆盖在 input 上的元素，键盘弹起后，点击就无法触发了
