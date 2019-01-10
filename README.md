@@ -4,6 +4,7 @@
 
 # 记录一些坑眼
 
+* `JSON.stringify(Infinity) === "null"`，`JSON.stringify({a: undefined}) === "{}"`（但 null 不会）
 * 父级 `overflow:auto; position:relative;`，子级绝对定位并超出，结果会显示滚动条，并非完全脱离文档流
 * 父级无高度时，子级 `position: relative` 的百分比定位 `top: 50%` 会无效
 * ueditor 插件初始化时会触发 `hashchange` 事件，希望你在这里面没有写什么操作
