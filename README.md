@@ -4,9 +4,13 @@
 
 # 记录一些坑眼
 
+* 给伪元素的 `content` 直接加 `text-indent:-999em` 无效，需改为其他 `display` 才行，但普通元素的 `inline` 没问题
 * `JSON.stringify(Infinity) === "null"`（NaN 也是），`JSON.stringify({a: undefined}) === "{}"`（但 null 不会）
 * 父级 `overflow:auto; position:relative;`，子级绝对定位并超出，结果会显示滚动条，并非完全脱离文档流
 * 父级无高度时，子级 `position: relative` 的百分比定位 `top: 50%` 会无效
+
+-----
+
 * ueditor 插件初始化时会触发 `hashchange` 事件，希望你在这里面没有写什么操作
 * `display: flex` 和子级 `margin: auto;` 合用时，效果很奇妙，比如居中/两个子级的自动空隙等
 * `<script src="xx.js" />` 不能使用单标签格式，不然会把后面的都当做文本
