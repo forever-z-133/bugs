@@ -6,7 +6,7 @@
 
 * UTF-16 字符在处理字符串时需注意，比如 `'𠮷'.slice(-1)` 会得到未知字符，恐怕只能用 `for-of` 来做了
 * 空数组进行 `every` 判断始终为 `true`，需根据场景做好排除
-* 在 SCSS 中 `@extend .x` 不仅会继承 `.x`，与其先关无论写在何处的 `h1.x` 也会被继承，形成 `h1.y` 的结果生成
+* 在 SCSS 中 `@extend .x` 不仅会继承 `.x`，与其相关无论写在何处的 `h1.x` 也会被继承
 * `:last-child` 是按 dom 位置来的，并不受 `order` 排序的影响
 * 给伪元素的 `content` 直接加 `text-indent:-999em` 无效，需改为其他 `display` 才行，但普通元素的 `inline` 没问题
 * `JSON.stringify(Infinity) === "null"`（NaN 也是），`JSON.stringify({a: undefined}) === "{}"`（但 null 不会）
