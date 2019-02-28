@@ -4,6 +4,7 @@
 
 # 记录一些坑眼
 
+* html 中 `data-userId` 会显示为全小写 `data-userid`，但 `attr('data-USERID')` 不区分大小写都能获取到
 * UTF-16 字符在处理字符串时需注意，比如 `'𠮷'.slice(-1)` 会得到未知字符，恐怕只能用 `for-of` 来做了
 * 空数组进行 `every` 判断始终为 `true`，需根据场景做好排除
 * 在 SCSS 中 `@extend .x` 不仅会继承 `.x`，与其相关无论写在何处的 `h1.x` 也会被继承
