@@ -4,6 +4,7 @@
 
 # 记录一些坑眼
 
+* 给 `option` 设 `label` 而不写在 `innerText`，安卓机正常，苹果机不显示文本但能选择
 * 在 vue 的根节点进行 `innerHTML += 'x'` 会造成 vue-router 失效，`appendChild` 是 OK 的
 * `input[type="checkbox"]` 加字符串 `checked="false"` 或 `setAttribute('checked', '')` 也会勾选
 * html 中 `data-userId` 会显示为全小写 `data-userid`，但 `attr('data-USERID')` 不区分大小写都能获取到
