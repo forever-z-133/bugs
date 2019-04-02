@@ -4,6 +4,10 @@
 
 # 记录一些坑眼
 
+* `RegExp` 第二个参数，若传入 `'s'` 部分机型报错，看 [文档](http://www.w3school.com.cn/jsref/jsref_obj_regexp.asp) 确实说只能传 `'igm'`
+
+-----
+
 * 给 `option` 设 `label` 而不写在 `innerText`，安卓机正常，苹果机不显示文本但能选择
 * 在 vue 的根节点进行 `innerHTML += 'x'` 会造成 vue-router 失效，`appendChild` 是 OK 的
 * `input[type="checkbox"]` 加字符串 `checked="false"` 或 `setAttribute('checked', '')` 也会勾选
