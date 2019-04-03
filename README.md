@@ -4,6 +4,7 @@
 
 # 记录一些坑眼
 
+* `[0, , 2, 3].indexOf()` 得 `-1`，`[0, undefined, 2, 3].indexOf()` 得 `1`
 * `RegExp` 第二个参数，若传入 `'s'` 部分机型报错，看 [文档](http://www.w3school.com.cn/jsref/jsref_obj_regexp.asp) 确实说只能传 `'igm'`
 
 -----
