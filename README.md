@@ -8,11 +8,11 @@
 * 极少情况下 `textarea` 书写时双标签间有回车会不显示 `placeholder`，可能与编辑器有关
 * IOS 的 `iframe` 不支持传高度，最好有个父级包着并设 `-webkit-overflow-scrolling` 滚动
 * `[0, , 2, 3].indexOf()` 得 `-1`，`[0, undefined, 2, 3].indexOf()` 得 `1`
-* `RegExp` 第二个参数，若传入 `'s'` 部分机型报错，看 [文档](http://www.w3school.com.cn/jsref/jsref_obj_regexp.asp) 确实说只能传 `'igm'`
+* `RegExp` 第二个参数，若传入 `'s'` 部分苹果机报错，看 [文档](http://www.w3school.com.cn/jsref/jsref_obj_regexp.asp) 确实说只能传 `'igm'`
 
 -----
 
-* 给 `option` 设 `label` 而不写在 `innerText`，安卓机正常，苹果机不显示文本但能选择
+* 给 `option` 设 `label` 而不写在 `innerText`，部分苹果机会不显示文本但能滑动选择
 * 在 vue 的根节点进行 `innerHTML += 'x'` 会造成 vue-router 失效，`appendChild` 是 OK 的
 * `input[type="checkbox"]` 加字符串 `checked="false"` 或 `setAttribute('checked', '')` 也会勾选
 * html 中 `data-userId` 会显示为全小写 `data-userid`，但 `attr('data-USERID')` 不区分大小写都能获取到
@@ -22,10 +22,10 @@
 * `:last-child` 是按 dom 位置来的，并不受 `order` 排序的影响
 * 给伪元素的 `content` 直接加 `text-indent:-999em` 无效，需改为其他 `display` 才行，即 `inline` 不可以
 * `JSON.stringify(Infinity) === "null"`（NaN 也是），`JSON.stringify({a: undefined}) === "{}"`（但 null 不会）
-* 父级 `overflow:auto; position:relative;`，子级绝对定位并超出，结果会显示滚动条，并非完全脱离文档流
 
 -----
 
+* 父级 `overflow:auto; position:relative;`，子级绝对定位并超出，结果会显示滚动条，并非完全脱离文档流
 * 父级无高度时，子级 `position: relative` 的百分比定位 `top: 50%` 会无效
 * ueditor 插件初始化时会触发 `hashchange` 事件，希望你在这里面没有写什么操作
 * `display: flex` 和子级 `margin: auto;` 合用时，效果很奇妙，比如居中/两个子级的自动空隙等
@@ -34,7 +34,6 @@
 * 小程序覆盖在 input 上的元素，键盘弹起后，点击就无法触发了
 * ElementUI 的 `el-date-picker[type="daterange"]` 在 **火狐** 下不支持 `yyyy.MM.dd` 格式数据的传入，`-/` 可以
 * 有 `mask` 的元素 `box-shadow` 非 `inset` 形态无效，`filter:drop-shadow()` 也是如此（可放到父级去）
-* IOS 上给 `translate3d` 新 `innerHTML` 后效果消失
 * `min-width` 的默认是 `auto`，而 `max-width` 的默认是 `none`
 
 -----
