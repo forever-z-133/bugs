@@ -4,6 +4,7 @@
 
 # 记录一些坑眼
 
+* 苹果机 Safari 下设 `user-scalable=no` 的 meta 无效
 * `btoa` 转 base64 不支持传入中文等 Unicode 字符，可搭配 `encodeURIComponent` 使用
 * 极少情况下 `textarea` 书写时双标签间有回车会不显示 `placeholder`，可能与编辑器有关
 * IOS 的 `iframe` 不支持传高度，最好有个父级包着并设 `-webkit-overflow-scrolling` 滚动
