@@ -4,7 +4,8 @@
 
 # 记录一些坑眼
 
-* 苹果机 Safari 下设 `user-scalable=no` 的 meta 无效
+* ES6 用变量作对象属性名时有点小问题，如 `var a = 'x'; var obj = { [a]: 1 }; obj[a]; // 1` 但 `obj.a` 不会
+* 苹果机 Safari 下设 `user-scalable=no` 的 `<meta>` 无效
 * `btoa` 转 base64 不支持传入中文等 Unicode 字符，可搭配 `encodeURIComponent` 使用
 * 极少情况下 `textarea` 书写时双标签间有回车会不显示 `placeholder`，可能与编辑器有关
 * IOS 的 `iframe` 不支持传高度，最好有个父级包着并设 `-webkit-overflow-scrolling` 滚动
@@ -106,37 +107,4 @@
 * 苹果手机自动播放音频得放在 `wx.ready` 里面
 * 摇一摇事件有时清除不掉，可能是触发太多烧机器，推荐再加个变量控制开关
 * `onstorage` 事件监听必须两个页面都打开着才能互传信息
-* `submit` 和 `button` 不能套在 `a` 里面，否则按钮事件将消失
-* 自己写的 Object.prototype.has 与 jquery 的 Tween 冲突，换个名字吧
-* 苹果机的渐变 `transparent` 可能会呈现为黑色，可用 `rgba(255,255,255,0)`；但渐变中也会出现半透明黑，得依情况改 rgb 三值
-* 苹果机 `rotateY` 问题超烦，旋转的一半后沉于 `body` 的背后不显示，需要 `translateZ` 来处理
-* 大部分苹果机微信支付后无法再横屏
-* 部分老牌机 `window.orientation` 不准，进去就是 90，多转几次又好了，十分偶现
-* `setInterval` 设置 `document.title` 移动端效果非常不稳定，用 `requestAnimationFrame` 就好了
-
------
-
-* `absolute` 下的 `offsetLeft` 会以父级定位的相对位置来计算（可能有误，以后研究）
-* `Object.assign` 的 `this` 指向有待研究
-* 移动端同个 `input[type="file"]` 的 change 事件只触发一次
-* if lt IE 只能判断到 9，10及10以上及edge都无效
-* sourceTree 上传，大小写不区分，比如 Index 和 index
-* `touchend` 时 `e.touches` 是已经不存在了的
-* canvas 的 `globalAlpha` 小于 0 时会按 1 来计算
-* 函数传参时最后多打个逗号，PC正常显示，但在移动端把后续程序全部卡住
-* 在 Vue 实例元素内，自己 append 出来的元素是无法修改的
-* `Vue.component` 必须放在 `new Vue` 前面
-
------
-
-* svg 的 `image` 必须带宽高，否则 firefox 等浏览器不显示
-* `input` 弹出的虚拟键盘仅 number 有下一步这样的功能键
-* `flex` 下的 `<img width="50%">` 高度 `auto` 会失效，需 `align-item: flex-start`
-* background 只支持 .svg 文件式的引用，无法使用 #xxx 代码式的引用
-* 多个 `transition-property` 会触发多次 `transitionEnd`，注意 border / padding 会触发四次
-* 多个 jquery 对象会触发多次动画回调，如 `$('.x1, .x2').show(cb)` 会触发两次 cb
-* 小程序的音频最好不要超过 8 个，不然总是有警告
-* 苹果机小程序背景音乐调不了音量
-* delete 只能删数组和对象里的键值，不能删除变量、函数和函数的参数。比如 `var a = 1; delete a; alert(a); // 2`
-* firefox 在 mask-size 小于 100% 时各种卡，大于时还行，不知怎么办
-* 微信放视频没有自动播放，需要点击触发。可见此 [教程](http://www.cnblogs.com/foreverZ/p/6038950.html)
+* `submit` 和 `
