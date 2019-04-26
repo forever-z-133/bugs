@@ -4,6 +4,7 @@
 
 # 记录一些坑眼
 
+* 用 `data:image/svg+xml,` 拼出来的 SVG 背景图，`background-size` 不支持拉伸了。
 * ES6 用变量作对象属性名时有点小问题，如 `var a = 'x'; var obj = { [a]: 1 }; obj[a]; // 1` 但 `obj.a` 不会
 * 苹果机 Safari 下设 `user-scalable=no` 的 `<meta>` 无效
 * `btoa` 转 base64 不支持传入中文等 Unicode 字符，可搭配 `encodeURIComponent` 使用
