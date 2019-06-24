@@ -4,8 +4,13 @@
 
 # 记录一些坑眼
 
+* 苹果机键盘弹起后元素上移，键盘收回后元素不归位问题，用 `$(document).scrollTop(0, 0);` 解决
+* 3.0 版本前的 `$.param` 会把空格转为 `+` 号
 * IOS 下的 webgl 不清晰，可显示 2d 的 canvas 绘制隐藏的 webgl 的 getImageDate 能清晰
 * 小程序不会正确处理图片链接中 `\`，造成图片请求但不显示，只能是 `/` 式的路径，比如 [图片](http://images.duocaixing.net\undefined/2019-06-04/201906041118494757_wKgED1ws7UCAKPhVAAVr2lUbIUI02.jpeg)
+
+-----
+
 * 部分安卓机 `background-image` 与 `border-radius` 合用会不显示图片，需加上 `background-color` 才行
 * `input[type="number"]` 不支持使用 selection 相关的光标操作
 * 用 `data:image/svg+xml,` 拼出来的 SVG 背景图，`background-size` 不支持拉伸了。
