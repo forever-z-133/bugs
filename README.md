@@ -4,7 +4,7 @@
 
 # 记录一些坑眼
 
-* Safari 和 IE9- 浏览器中，`option` 设 `display:none` 无效
+* Safari 和 IE9- 浏览器中，`option` 设 `display:none` 无效，可包一层隐藏的 `span` 或重新拼 dom
 * CSS 的 `centent` 的文本和图片，是不可选择的
 * 苹果机键盘弹起后元素上移，键盘收回后元素不归位，用 `$(document).scrollTop(0, 0);` 解决（部分机型依旧不行）
 * 3.0 版本前的 `$.param` 会把空格转为 `+` 号，可能后来发现链接中的 + 与空格的 + 冲突所以砍掉了
