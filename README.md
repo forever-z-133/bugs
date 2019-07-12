@@ -4,6 +4,9 @@
 
 # 记录一些坑眼
 
+* `let` 和 `const` 不会像 `var` 一样会在 window 下声明，比如 `let a` 是取不到 `window.a` 的
+* `wx.onMenuShareAppMessage` 的 `type` 不能是空字符串，要么不传，要么 `type: "link"`
+* `wx.config` 需要传入的链接，苹果机下如果使用过 history api 将签名失败。
 * Safari 和 IE9- 浏览器中，`option` 设 `display:none` 无效，可包一层隐藏的 `span` 或重新拼 dom
 * CSS 的 `centent` 的文本和图片，是不可选择的
 * 苹果机键盘弹起后元素上移，键盘收回后元素不归位，用 `$(document).scrollTop(0, 0);` 解决（部分机型依旧不行）
