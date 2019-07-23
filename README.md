@@ -4,6 +4,7 @@
 
 # 记录一些坑眼
 
+* `<select>` 的 `readonly` 还是能点开，推荐使用 `select[readonly] { pointer-events: none; }`
 * `let` 和 `const` 不会像 `var` 一样会在 window 下声明，比如 `let a` 是取不到 `window.a` 的
 * `wx.onMenuShareAppMessage` 的 `type` 不能是空字符串，要么不传，要么 `type: "link"`
 * `wx.config` 需要传入的链接，苹果机下如果使用过 history api 将签名失败。
