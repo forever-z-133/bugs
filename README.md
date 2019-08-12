@@ -4,6 +4,7 @@
 
 # 记录一些坑眼
 
+* `eval([1,2] + '==' + 2);  // true`，感觉使用 `eval` 时还会有其他骚处理
 * `<select>` 的 `readonly` 还是能点开，推荐使用 `select[readonly] { pointer-events: none; }`
 * `let` 和 `const` 不会像 `var` 一样会在 window 下声明，比如 `let a` 是取不到 `window.a` 的
 * `wx.onMenuShareAppMessage` 的 `type` 不能是空字符串，要么不传，要么 `type: "link"`
@@ -154,6 +155,6 @@
 * 多个 jquery 对象会触发多次动画回调，如 `$('.x1, .x2').show(cb)` 会触发两次 cb
 * 小程序的音频最好不要超过 8 个，不然总是有警告
 * 苹果机小程序背景音乐调不了音量
-* delete 只能删数组和对象里的键值，不能删除变量、函数和函数的参数。比如 `var a = 1; delete a; alert(a); // 2`
+* delete 只能删数组和对象里的键值，不能删除变量、函数和函数的参数。比如 `var a = 1; delete a; alert(a); // 1`
 * firefox 在 mask-size 小于 100% 时各种卡，大于时还行，不知怎么办
 * 微信放视频没有自动播放，需要点击触发。可见此 [教程](http://www.cnblogs.com/foreverZ/p/6038950.html)
