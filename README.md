@@ -4,6 +4,7 @@
 
 # 记录一些坑眼
 
+* weui 的 `hideLoading` 方法会使 Toast 也消失
 * `transform: scale(.5)` 下的 `offsetWidth` 等还是原宽，只能 `getBoundingClientRect().width`
 * 其他浏览器下单页面项目的 `/#/` 为认为是 hash，但 IE 浏览器会认为是路径
 * `\1` 在正则中，有匹配还好，没有的话请注意 `'\1'.split('')` 与 `/\1/.test('\1')` 的不同
