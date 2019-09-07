@@ -7,7 +7,7 @@
 * `[NaN].indexOf(NaN); // -1` 数组中找不到 `NaN`
 * weui 的 `hideLoading` 方法会使 Toast 也消失
 * `transform: scale(.5)` 下的 `offsetWidth` 等还是原宽，只能 `getBoundingClientRect().width`
-* 其他浏览器下单页面项目的 `/#/` 为认为是 hash，但 IE 浏览器会认为是路径
+* 其他浏览器下单页面项目的 `/#/` 被认为是 hash，但 IE 浏览器会认为是路径，会造成无法访问
 * `\1` 在正则中，有匹配还好，没有的话请注意 `'\1'.split('')` 与 `/\1/.test('\1')` 的不同
 * `eval([1,2] + '==' + 2);  // true`，感觉使用 `eval` 时还会有其他骚处理
 
@@ -18,7 +18,7 @@
 * `wx.onMenuShareAppMessage` 的 `type` 不能是空字符串，要么不传，要么 `type: "link"`
 * `wx.config` 需要传入的链接，苹果机下如果使用过 history api 将签名失败。
 * Safari 和 IE9- 浏览器中，`option` 设 `display:none` 无效，可包一层隐藏的 `span` 或重新拼 dom
-* CSS 的 `centent` 的文本和图片，是不可选择的
+* CSS 的 `content` 的文本和图片，是不可选择的
 * 苹果机键盘弹起后元素上移，键盘收回后元素不归位，用 `$(document).scrollTop(0, 0);` 解决（部分机型依旧不行）
 * 3.0 版本前的 `$.param` 会把空格转为 `+` 号，可能后来发现链接中的 + 与空格的 + 冲突所以砍掉了
 * IOS 下的 webgl 不清晰，可显示 2d 的 canvas 绘制隐藏的 webgl 的 getImageDate 能清晰
@@ -28,18 +28,18 @@
 
 * 部分安卓机 `background-image` 与 `border-radius` 合用会不显示图片，需加上 `background-color` 才行
 * `input[type="number"]` 不支持使用 selection 相关的光标操作
-* 用 `data:image/svg+xml,` 拼出来的 SVG 背景图，`background-size` 不支持拉伸了。
+* 用 `data:image/svg+xml,` 拼出来的 SVG 背景图，`background-size` 不支持拉伸
 * ES6 用变量作对象属性名时有点小问题，如 `var a = 'x'; var obj = { [a]: 1 }; obj[a]; // 1` 但 `obj.a` 不会
 * 苹果机 Safari 下设 `user-scalable=no` 的 `<meta>` 无效
 * `btoa` 转 base64 不支持传入中文等 Unicode 字符，可搭配 `encodeURIComponent` 使用
-* 极少情况下 `textarea` 书写时双标签间有回车会不显示 `placeholder`，可能与编辑器有关
+* 极少情况下 `textarea` 书写时双标签间有回车会不显示 `placeholder`，不详
 * IOS 的 `iframe` 不支持传高度，最好有个父级包着并设 `-webkit-overflow-scrolling` 滚动
 * `[0, , 2, 3].indexOf()` 得 `-1`，`[0, undefined, 2, 3].indexOf()` 得 `1`
 * `RegExp` 第二个参数，若传入 `'s'` 部分苹果机报错，看 [文档](http://www.w3school.com.cn/jsref/jsref_obj_regexp.asp) 确实说只能传 `'igm'`
 
 -----
 
-* 给 `option` 设 `label` 而不写在 `innerText`，部分苹果机会不显示文本但能滑动选择
+* 给 `option` 设 `label` 而不写在标签内，部分苹果机会不显示文本
 * 在 vue 的根节点进行 `innerHTML += 'x'` 会造成 vue-router 失效，`appendChild` 是 OK 的
 * `input[type="checkbox"]` 加字符串 `checked="false"` 或 `setAttribute('checked', '')` 也会勾选
 * html 中 `data-userId` 会显示为全小写 `data-userid`，但 `attr('data-USERID')` 不区分大小写都能获取到
