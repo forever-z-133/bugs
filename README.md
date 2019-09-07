@@ -4,6 +4,7 @@
 
 # 记录一些坑眼
 
+* `[NaN].indexOf(NaN); // -1` 数组中找不到 `NaN`
 * weui 的 `hideLoading` 方法会使 Toast 也消失
 * `transform: scale(.5)` 下的 `offsetWidth` 等还是原宽，只能 `getBoundingClientRect().width`
 * 其他浏览器下单页面项目的 `/#/` 为认为是 hash，但 IE 浏览器会认为是路径
