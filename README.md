@@ -4,6 +4,7 @@
 
 # 记录一些坑眼
 
+* canvas 的 `lineWidth` 即使设成 `0` 也还会是 `1`
 * `[NaN].indexOf(NaN); // -1` 数组中找不到 `NaN`
 * weui 的 `hideLoading` 方法会使 Toast 也消失
 * `transform: scale(.5)` 下的 `offsetWidth` 等还是原宽，只能 `getBoundingClientRect().width`
