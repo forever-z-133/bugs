@@ -4,6 +4,7 @@
 
 # 记录一些坑眼
 
+* 子元素为 `inline-block` 时父级底部会有一点空隙，与 `vertical-align + line-height` 有关，[案例](https://codepen.io/shadowwalkerzero/embed/ywePBL/?height=265&theme-id=0&default-tab=result)
 * canvas 的 `lineWidth` 即使设成 `0` 也还会是 `1`
 * `[NaN].indexOf(NaN); // -1` 数组中找不到 `NaN`
 * weui 的 `hideLoading` 方法会使 Toast 也消失
