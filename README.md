@@ -4,9 +4,14 @@
 
 # 记录一些坑眼
 
+
+* `inline` 的 `margin-left` 和 `text-indent` 效果一样
 * `36.62 * 100; // 3661.9999999999995` 故而 `(0.1 * 10 + 0.2 * 10) / 10` 的处理还需加上 `Math.round`
 * `166.665.toFixed(2)` 没有按正确的四舍五入等于 `"166.67"`
 * 如 `<script></script>` 中有 `"</script">` 的字符串会报错，需将 `/` 转义为 `\/`
+
+-----
+
 * 文本内有空格时，`text-indent: -999em` 莫名会有空白宽度（chrome64 版本有）
 * 好像没办法触原生 `select` 的展开
 * 子元素为 `inline-block` 时父级底部会有一点空隙，与 `vertical-align + line-height` 有关，[案例](https://codepen.io/shadowwalkerzero/embed/ywePBL/?height=265&theme-id=0&default-tab=result)
