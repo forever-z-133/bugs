@@ -4,6 +4,7 @@
 
 # 记录一些坑眼
 
+* vue 的 `computed:{x(){}}` 不能直接 `v-modal="x"`
 * 小程序 `<web-view>` 的链接 `xx?a=1` 会访问 404 ，改为 `xx/?a=1` 才行
 * `inline` 的 `margin-left` 和 `text-indent` 效果一样
 * `36.62 * 100; // 3661.9999999999995` 故而 `(0.1 * 10 + 0.2 * 10) / 10` 的处理还需加上 `Math.round`
