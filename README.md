@@ -4,7 +4,7 @@
 
 # 记录一些坑眼
 
-* 当 `props: { x: [Boolean, String] }` 时，`x: ''` 为 `true`，`x: 'x'` 为 `'x'`
+* vue 中当 `props: { x: [Boolean, String] }` 时，`x: ''` 为 `true`，`x: 'x'` 为 `'x'`
 * vue 的 `computed:{x(){}}` 不能直接 `v-modal="x"`
 * 小程序 `<web-view>` 的链接 `xx?a=1` 会访问 404 ，改为 `xx/?a=1` 才行
 * `inline` 的 `margin-left` 和 `text-indent` 效果一样
