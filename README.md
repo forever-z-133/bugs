@@ -4,6 +4,7 @@
 
 # 记录一些坑眼
 
+* `var x = [] \n (function(){})()` 数组下一行是括号，没写分号造成的报错
 * 正则 `\w` 也会匹配到下划线 `_` 和数字
 * vue 中当 `props: { x: [Boolean, String] }` 时，`x: ''` 为 `true`，`x: 'x'` 为 `'x'`
 * vue 的 `computed:{x(){}}` 不能直接 `v-modal="x"`
