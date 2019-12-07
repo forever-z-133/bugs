@@ -4,6 +4,11 @@
 
 # 记录一些坑眼
 
+* jQuery 的 append 对同源 script 用的 appendChild，对不同源资源是 ajax 然后 eval，其实不知先后
+* `innerHTML = '<script src>'` 是不加载 script 的
+
+-----
+
 * 微信浏览器进入页面后迅速刷新本页，会造成其中的 svg 显示异常，svg 被缓存后会恢复正常，因此应避免此类操作
 * `var x = [] \n (function(){})()` 数组下一行是括号，没写分号造成的报错
 * 正则 `\w` 也会匹配到下划线 `_` 和数字
