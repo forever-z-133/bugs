@@ -4,6 +4,8 @@
 
 # 记录一些坑眼
 
+* 如果小程序 web-view 内网页跳转带有 hash 操作，部分安卓机用 replace/replaceState 也会跳页两次
+* 小程序设置 web-view 链接时需带上 `#wechat_redirect`，否则苹果不能访问
 * jQuery 的 append 对同源 script 用的 appendChild，对不同源资源是 ajax 然后 eval，其实不知先后
 * `innerHTML = '<script src>'` 是不加载 script 的
 
