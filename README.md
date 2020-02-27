@@ -4,6 +4,7 @@
 
 # 记录一些坑眼
 
+* 同时解密 `decodeURI(decodeURI("%5Cu9648"))` 不可行，需 `JSON.parse('"' + decodeURI('%5Cu9648') + '"')`
 * 小程序自定义组件中，无法 canvasToTempFilePath 导出图片，报 fail canvas is empty
 * 小程序自定义组件中的 canvas，在 createCanvasContext(canvasId, context) 时必须加 context
 * 如果小程序 web-view 内网页跳转带有 hash 操作，部分安卓机用 replace/replaceState 也会跳页两次
