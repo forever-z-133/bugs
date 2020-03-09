@@ -4,6 +4,7 @@
 
 # 记录一些坑眼
 
+* `'abc'.includes('')` 包含空字符串为空时始终为 true，需进行规避
 * 同时解密 `decodeURI(decodeURI("%5Cu9648"))` 不可行，需 `JSON.parse('"' + decodeURI('%5Cu9648') + '"')`
 * 小程序自定义组件中，无法 canvasToTempFilePath 导出图片，报 fail canvas is empty
 * 小程序自定义组件中的 canvas，在 createCanvasContext(canvasId, context) 时必须加 context
