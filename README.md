@@ -4,7 +4,8 @@
 
 # 记录一些坑眼
 
-* 在部分版本浏览器中，某些元素如 `<summary>` `<fieldset>` 和 `<button>` 不可作为 `flex` 容器的工作。
+* 定位或 inineflex 的，且定高的容器设 `flex-flow: column wrap` 时，表现很奇怪，无法实现包裹效果
+* 在部分版本浏览器中，某些元素如 `<summary>` `<fieldset>` 和 `<button>` 不可作为 `flex` 容器的工作
 * `'abc'.includes('')` 包含空字符串为空时始终为 true，需进行规避
 * 同时解密 `decodeURI(decodeURI("%5Cu9648"))` 不可行，需 `JSON.parse('"' + decodeURI('%5Cu9648') + '"')`
 * 小程序自定义组件中，无法 canvasToTempFilePath 导出图片，报 fail canvas is empty
