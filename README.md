@@ -5,20 +5,19 @@
 # 记录一些坑眼
 
 * 模板字符串中 `$${price}` 和 `\${price}` 结果不同，前者返回 `$0.00` 后者返回 `${price}`
-* 定位或 inineflex 的，且定高的容器设 `flex-flow: column wrap` 时，表现很奇怪，无法实现包裹效果
 
 -----
 
-* 在部分版本浏览器中，某些元素如 `<summary>` `<fieldset>` 和 `<button>` 不可作为 `flex` 容器的工作
+* 在部分版本浏览器中，某些元素如 `<summary>` `<fieldset>` `<button>` 不可作为 `flex` 容器的工作
 * `'abc'.includes('')` 包含空字符串为空时始终为 true，需进行规避
 * 同时解密 `decodeURI(decodeURI("%5Cu9648"))` 不可行，需 `JSON.parse('"' + decodeURI('%5Cu9648') + '"')`
-* 小程序自定义组件中，无法 canvasToTempFilePath 导出图片，报 fail canvas is empty
+* 小程序自定义组件中，无法 canvasToTempFilePath 生成图片，报 fail canvas is empty
 * 小程序自定义组件中的 canvas，在 createCanvasContext(canvasId, context) 时必须加 context
-* 如果小程序 web-view 内网页跳转带有 hash 操作，部分安卓机用 replace/replaceState 也会跳页两次
-* 小程序设置 web-view 链接时需带上 `#wechat_redirect`，否则苹果不能访问
+* 如果小程序 web-view 内网页跳转带有 hash 操作，部分安卓机用 replace/replaceState 会跳页两次
+* 小程序设置 web-view 链接时需带上 `#wechat_redirect`，内部跳页时不需带，否则苹果不能访问
 * jQuery 的 append 对同源 script 用的 appendChild，对不同源资源是 ajax 然后 eval，其实不知先后
-* `innerHTML = '<script src>'` 是不加载 script 的
-* 微信浏览器进入页面后迅速刷新本页，会造成其中的 svg 显示异常，svg 被缓存后会恢复正常，因此应避免此类操作
+* `innerHTML = '<script src="http://">'` 是不加载 script 的
+* 微信浏览器进入页面后 `reload` 刷新本页，会造成其中的 svg 显示异常，svg 被缓存后会恢复正常，应避免此类操作
 
 -----
 
@@ -27,11 +26,11 @@
 * vue 中当 `props: { x: [Boolean, String] }` 时，`x: ''` 为 `true`，`x: 'x'` 为 `'x'`
 * vue 的 `computed:{x(){}}` 不能直接 `v-modal="x"`
 * 小程序 `<web-view>` 的链接 `xx?a=1` 会访问 404 ，改为 `xx/?a=1` 才行
-* `inline` 的 `margin-left` 和 `text-indent` 效果一样
+* `inline` 的 `margin-left` 和 `text-indent` 效果竟然是一样的
 * `36.62 * 100; // 3661.9999999999995` 故而 `(0.1 * 10 + 0.2 * 10) / 10` 的处理还需加上 `Math.round`
 * `166.665.toFixed(2)` 没有按正确的四舍五入等于 `"166.67"`
-* 如 `<script></script>` 中有 `"</script">` 的字符串会报错，需将 `/` 转义为 `\/`
 * 空字符串 `''.split()` 会得到 `[""]` 不比要的数组项，需进行规避
+* 定位或 `inline-flex` 的，且定高的容器设 `flex-flow: column wrap` 时，表现很奇怪，无法实现包裹效果
 
 -----
 
