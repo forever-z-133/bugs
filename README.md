@@ -4,6 +4,7 @@
 
 # 记录一些坑眼
 
+* 阻止微信浏览器字体大小 `setFontSizeCallback` 在微信上可行，在企业微信上不可行
 * 组件内的 `slot` 不算父级的 `slot`，[案例](https://codesandbox.io/s/zujianneide-slot-busuanfujide-slot-u1k3h)
 * 子级非 `flex-shrink:0` 且父级为 `flex` 时，子级尺寸不会超出父级，[案例](https://codepen.io/foreverZ133/pen/xxwmdJE)
 * 在断点时发现 flutter 的 `Future` 的函数连本身运行也会在普通函数之后
