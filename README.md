@@ -4,6 +4,9 @@
 
 # 记录一些坑眼
 
+* 给定位定高的 `body` 设置背景图，`contain` 会失效，[案例](https://codepen.io/foreverZ133/pen/gOaNdLv)
+* 给不定高 `body` 设 `background-size` 表现比较意外，[案例](https://codepen.io/foreverZ133/pen/JjYQadG)
+* 当父级 `overflow: auto`，子级绝对定位超出，父级不加 `relative` 可看到子级，[案例](https://codepen.io/foreverZ133/pen/oNjrMog)
 * 阻止微信浏览器字体大小 `setFontSizeCallback` 在微信上可行，在企业微信上不可行
 * 组件内的 `slot` 不算父级的 `slot`，[案例](https://codesandbox.io/s/zujianneide-slot-busuanfujide-slot-u1k3h)
 * 子级非 `flex-shrink:0` 且父级为 `flex` 时，子级尺寸不会超出父级，[案例](https://codepen.io/foreverZ133/pen/xxwmdJE)
@@ -90,8 +93,8 @@
 
 -----
 
-* 父级 `overflow:auto; position:relative;`，子级绝对定位并超出，结果会显示滚动条，并非完全脱离文档流
-* 父级无高度时，子级 `position: relative` 的百分比定位 `top: 50%` 会无效
+* 父级 `overflow:auto; position:relative;`，子级绝对定位并超出，结果会显示滚动条（chrome 64）
+* 父级无高度时，子级 `position: relative` 的百分比定位 `top: 50%` 会无效，[案例](https://codepen.io/foreverZ133/pen/WNQqKwO)
 * ueditor 插件初始化时会触发 `hashchange` 事件，希望你在这里面没有写什么操作
 * `display: flex` 和子级 `margin: auto;` 合用时，效果很奇妙，比如居中/两个子级的自动空隙等
 * `<script src="xx.js" />` 不能使用单标签格式，不然会把后面的都当做文本
@@ -110,7 +113,6 @@
 * IOS will only allow focus to be triggered on other elements
 * `new RegExp` 需对特殊字符进行转义，比如 `new RegExp('\\d').test(1)` 才有效，还是 `/\d/.test(1)` 好呀。
 * 设置 `border-image` 后，`border-radius` 失效。
-* 给**定位**的 `body` 设 `background-size`，如 `100% 100%` 或 `contain` 会没有相对高度，但 `cover` 有效。
 * 正则的括号会在 `match` 时再单独提取出来一份，比如 `"ab".match(/(b)/)` 会得到 `["b","b"]`
 * 苹果机上当 `div` 的 `click` 委托在 `document` 或 `body` 上会无法点击，可换为 `a` 或添加 `cursor: pointer` 等。[见文](https://www.cnblogs.com/Steping/p/5737547.html)
 * 苹果机移动端 `contenteditable` 无效，需加上 `-webkit-user-select: text`
@@ -152,6 +154,7 @@
 * 苹果机有滚动反弹，与 `position: fixed` 一起玩耍时很可怕，特别是微信浏览器
 * `clip:rect(1,2,3,4)` 必须要和 `absolute` 合用，且 2&3 必须有(作为宽高)，更推荐使用 `clip-path`
 * `scaleX` 等的默认值是 0 不是 1，所以小心 css 动画时会有一闪的状态，虽然通常我们会用 `scale(x, y)` 更多
+* svg 的 `image` 必须带宽高，否则 firefox 等浏览器不显示
 
 -----
 
@@ -194,7 +197,6 @@
 
 -----
 
-* svg 的 `image` 必须带宽高，否则 firefox 等浏览器不显示
 * `input` 弹出的虚拟键盘仅 number 有下一步这样的功能键
 * `flex` 下的 `<img width="50%">` 高度 `auto` 会失效，需 `align-item: flex-start`
 * background 只支持 .svg 文件式的引用，无法使用 #xxx 代码式的引用
