@@ -4,6 +4,7 @@
 
 # 记录一些坑眼
 
+* `let a = b = 1` 中的 `b` 其实是 `var` 的
 * 给定位定高的 `body` 设置背景图，`contain` 会失效，[案例](https://codepen.io/foreverZ133/pen/gOaNdLv)
 * 给不定高 `body` 设 `background-size` 表现比较意外，[案例](https://codepen.io/foreverZ133/pen/JjYQadG)
 * 当父级 `overflow: auto`，子级绝对定位超出，父级不加 `relative` 可看到子级，[案例](https://codepen.io/foreverZ133/pen/oNjrMog)
