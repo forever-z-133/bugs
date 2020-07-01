@@ -4,6 +4,7 @@
 
 # 记录一些坑眼
 
+* SVG 当 `fill="none"` 时无法触发 SMIL 的 `begin="click"`，需用 `fill="transparent"`
 * `let a = b = 1` 中的 `b` 其实是 `var` 的
 * 给定位定高的 `body` 设置背景图，`contain` 会失效，[案例](https://codepen.io/foreverZ133/pen/gOaNdLv)
 * 给不定高 `body` 设 `background-size` 表现比较意外，[案例](https://codepen.io/foreverZ133/pen/JjYQadG)
