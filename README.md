@@ -4,8 +4,9 @@
 
 # 记录一些坑眼
 
+* CSS 的 `content: attr(data-title)` 中 attr 加引号会失效
 * 如下条，当想要无高度的 appBar 时 child 若用 `SizedBox.shrink()` 表现不一致
-* Flutter 中想要无高度的 appBar 可用 `appBar: new PreferredSize(preferredSize: Size.zero, child: new Container())`
+* Flutter 中想要无高度的 appBar 可用 `PreferredSize(preferredSize: Size.zero, child: Container())`
 * Flutter 中在无 appBar 的 body 中使用 Expanded 在顶部会有奇怪空白，[案例](https://dartpad.cn/54ed9402e0c86f0c9b8b44d6f2d48d02)（需翻墙）
 
 -----
