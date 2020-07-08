@@ -4,6 +4,7 @@
 
 # 记录一些坑眼
 
+* `inline` 中定位 `right: 0` 是按最后一个字符来定的，而不是容器边界
 * CSS 的 `content: attr(data-title)` 中 attr 加引号会失效
 * 如下条，当想要无高度的 appBar 时 child 若用 `SizedBox.shrink()` 表现不一致
 * Flutter 中想要无高度的 appBar 可用 `PreferredSize(preferredSize: Size.zero, child: Container())`
