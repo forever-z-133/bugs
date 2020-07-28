@@ -4,6 +4,7 @@
 
 # 记录一些坑眼
 
+* `transition` 和 `animation` 的 `0` 必须用 `0s`
 * `inline` 中定位 `right: 0` 是按最后一个字符来定的，而不是容器边界
 * CSS 的 `content: attr(data-title)` 中 attr 加引号会失效
 * 如下条，当想要无高度的 appBar 时 child 若用 `SizedBox.shrink()` 表现不一致
