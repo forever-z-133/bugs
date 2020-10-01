@@ -4,6 +4,7 @@
 
 # 记录一些坑眼
 
+* `flex: 1` 实则为 `flex: 1 1 0` 的缩写，应写为 ` flex: auto` 或 `flex: 75%` 更好
 * flutter 的 `Positioned` 如果没有定位属性，则会与 `Container` 表现一致
 * `transition` 和 `animation` 的 `0` 必须用 `0s`
 * `inline` 中定位 `right: 0` 是按最后一个字符来定的，而不是容器边界
