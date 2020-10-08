@@ -4,6 +4,7 @@
 
 # 记录一些坑眼
 
+* vue3 中自定义事件最好不要与原始事件同名，比如子级 `$emit('click')` 父级 `@click` 会触发两次，子级需加 `emits: ['click']`
 * `flex: 1` 实则为 `flex: 1 1 0` 的缩写，应写为 ` flex: auto` 或 `flex: 75%` 更好
 * flutter 的 `Positioned` 如果没有定位属性，则会与 `Container` 表现一致
 * `transition` 和 `animation` 的 `0` 必须用 `0s`
