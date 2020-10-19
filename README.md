@@ -4,6 +4,7 @@
 
 # 记录一些坑眼
 
+* 部分浏览器可以给 `background-image` 加上 `transition` 表现为渐显渐消的效果，但非常不稳定
 * vue3 中自定义事件最好不要与原始事件同名，比如子级 `$emit('click')` 父级 `@click` 会触发两次，子级需加 `emits: ['click']`
 * `flex: 1` 实则为 `flex: 1 1 0` 的缩写，应写为 ` flex: auto` 或 `flex: 75%` 更好
 * flutter 的 `Positioned` 如果没有定位属性，则会与 `Container` 表现一致
