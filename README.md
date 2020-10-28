@@ -4,12 +4,12 @@
 
 # 记录一些坑眼
 
-* 部分浏览器可以给 `background-image` 加上 `transition` 表现为渐显渐消的效果，但非常不稳定
-* vue3 中自定义事件最好不要与原始事件同名，比如子级 `$emit('click')` 父级 `@click` 会触发两次，子级需加 `emits: ['click']`
+* `transition-delay` 为 `0ms` 不会触发 `transitionend` 事件，哪怕有 `0.001ms` 就会。`animation` 没这问题
+* 部分浏览器 `transition: background-image 1s` 会有两图重叠渐显渐消的效果，但非常不稳定
 * `flex: 1` 实则为 `flex: 1 1 0` 的缩写，应写为 ` flex: auto` 或 `flex: 75%` 更好
 * flutter 的 `Positioned` 如果没有定位属性，则会与 `Container` 表现一致
-* `transition` 和 `animation` 的 `0` 必须用 `0s`
-* `inline` 中定位 `right: 0` 是按最后一个字符来定的，而不是容器边界
+* `transition` 和 `animation` 的 `0` 必须有单位，如 `0s`
+* `inline` 中定位然后 `right: 0` 是按最后一个字符来定的，而不是容器边界
 * CSS 的 `content: attr(data-title)` 中 attr 加引号会失效
 * 如下条，当想要无高度的 appBar 时 child 若用 `SizedBox.shrink()` 表现不一致
 * Flutter 中想要无高度的 appBar 可用 `PreferredSize(preferredSize: Size.zero, child: Container())`
