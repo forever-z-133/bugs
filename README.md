@@ -4,6 +4,10 @@
 
 # 记录一些坑眼
 
+* `x = x++` 还是原值，三目运算时特别注意，承认是我犯傻了
+
+-----
+
 * `transition-delay` 为 `0ms` 不会触发 `transitionend` 事件，哪怕有 `0.001ms` 就会。`animation` 没这问题
 * 部分浏览器 `transition: background-image 1s` 会有两图重叠渐显渐消的效果，但非常不稳定
 * `flex: 1` 实则为 `flex: 1 1 0` 的缩写，应写为 ` flex: auto` 或 `flex: 75%` 更好
