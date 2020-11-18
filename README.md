@@ -4,6 +4,7 @@
 
 # 记录一些坑眼
 
+* SVG 中 `polygon` 没有 `x` 等调位置，只能靠 `transform` 了
 * `var x=0; var y=false; x=y?100:x++` 答案为 0，挺有趣的错误
 
 -----
