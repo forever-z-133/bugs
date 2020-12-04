@@ -4,6 +4,7 @@
 
 # 记录一些坑眼
 
+* `case` 若不加 `{}` 其实不算独立作用域，比如 `switch(true) { case 1: let a; break; case 2: let a; break; }` 会报错
 * SVG 中 `polygon` 没有 `x` 等调位置，只能靠 `transform` 了
 * `var x=0; var y=false; x=y?100:x++` 答案为 0，挺有趣的错误
 
