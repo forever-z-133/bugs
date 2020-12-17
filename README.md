@@ -6,7 +6,7 @@
 
 * cocos 的 `cc.Graphics` 代码写的 `fillColor` 不支持半透明，但 Creator 软件的设置 `Fill Color` 倒有效
 * 父级 `pointer-events: none` 但子级为 `auto`，那子级范围内认可触发父级效果，[案例](https://codepen.io/foreverZ133/pen/NWRNqVY)
-* `case` 若不加 `{}` 其实不算独立作用域，比如 `switch(1) { case 1: let a; break; case 2: let a; break; }` 会报错
+* `case` 若不加 `{}` 并未独立作用域，比如 `switch(1) { case 1: let a; break; case 2: let a; break; }` 会报错
 * SVG 中 `polygon` 没有 `x` 等调位置，只能靠 `transform` 了
 * `var x=0; var y=false; x=y?100:x++` 答案为 0，挺有趣的错误
 
@@ -137,7 +137,7 @@
 * `new RegExp` 需对特殊字符进行转义，比如 `new RegExp('\\d').test(1)` 才有效，还是 `/\d/.test(1)` 好呀。
 * 设置 `border-image` 后，`border-radius` 失效。
 * 正则的括号会在 `match` 时再单独提取出来一份，比如 `"ab".match(/(b)/)` 会得到 `["b","b"]`
-* 苹果机上当 `div` 的 `click` 委托在 `document` 或 `body` 上会无法点击，可换为 `a` 或添加 `cursor: pointer` 等。[见文](https://www.cnblogs.com/Steping/p/5737547.html)
+* 苹果机上 `div` 的 `click` 委托在 `document` 或 `body` 上会无效，可换为 `a` 或添加 `cursor: pointer` 等。[见文](https://www.cnblogs.com/Steping/p/5737547.html)
 * 苹果机移动端 `contenteditable` 无效，需加上 `-webkit-user-select: text`
 
 -----
@@ -159,7 +159,7 @@
 * 粘贴功能 `execCommand('paste')` 被各家浏览器禁用掉了
 * 小程序的 `cover-view` 手机上不触发 touch 事件
 * 小程序的 `cover-image` 不能单独定位，如果父级 `cover-view` 定位了那倒可以了
-* 写 HTML 时两个节点间有换行或空格，需要两次 nextSibling 才能找到上一个节点，因为中间多了一个空白的 text 节点
+* 写 HTML 时两个节点间有换行或空格，需要两次 nextSibling 才能找到下个节点，因为中间多个空白的 text 节点
 * 小程序的 toast 和 loading 等其实解决不了点击太快的问题，还得靠变量来阻止才行
 * `inline` 行级元素设置 `transform` 无效
 * 苹果机没有原生双击事件 `dblclick`
@@ -199,7 +199,7 @@
 * `onstorage` 事件监听必须两个页面都打开着才能互传信息
 * `submit` 和 `button` 不能套在 `a` 里面，否则按钮事件将消失
 * 自己写的 Object.prototype.has 与 jquery 的 Tween 冲突，换个名字吧
-* 苹果机的渐变 `transparent` 可能会呈现为黑色，可用 `rgba(255,255,255,0)`；但渐变中也会出现半透明黑，得依情况改 rgb 三值
+* 苹果机的渐变 `transparent` 可能会呈现为黑色，可用 `rgba(255,255,255,0)`
 * 苹果机 `rotateY` 问题超烦，旋转的一半后沉于 `body` 的背后不显示，需要 `translateZ` 来处理
 * 大部分苹果机微信支付后无法再横屏
 * 部分老牌机 `window.orientation` 不准，进去就是 90，多转几次又好了，十分偶现
