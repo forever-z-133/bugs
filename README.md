@@ -4,6 +4,7 @@
 
 # 记录一些坑眼
 
+* 在省略样式处创建层叠上下文，会未被省略，但表现很奇特，[案例](https://codepen.io/foreverZ133/pen/oNzdYXZ)
 * 浏览器回退时接口会 `from disk cache` 使用缓存造成动态数据未更新，应该是主要依据于 `Last-Modified`
 * cocos 的 `cc.Graphics` 代码写的 `fillColor` 不支持半透明，但 Creator 软件的设置 `Fill Color` 倒有效
 * 父级 `pointer-events: none` 但子级为 `auto`，那子级范围内认可触发父级效果，[案例](https://codepen.io/foreverZ133/pen/NWRNqVY)
