@@ -4,6 +4,7 @@
 
 # 记录一些坑眼
 
+* `gap/grid-gap` 中 y 轴若为百分比，会以宽度为准，且不会撑起高度
 * 在省略样式处创建层叠上下文，会未被省略，但表现很奇特，[案例](https://codepen.io/foreverZ133/pen/oNzdYXZ)
 * 浏览器回退时接口会 `from disk cache` 使用缓存造成动态数据未更新，应该是主要依据于 `Last-Modified`
 * cocos 的 `cc.Graphics` 代码写的 `fillColor` 不支持半透明，但 Creator 软件的设置 `Fill Color` 倒有效
