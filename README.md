@@ -4,6 +4,7 @@
 
 # 记录一些坑眼
 
+* js 中 `??` 属于低优先级，比如 `1 + undefined ?? 0` 会得到 `NaN`，在 dart 中也是
 * `bind` 修改后无法再次修改 `this`，因此诞生了软绑定 `softBind`，[案例](https://codepen.io/foreverZ133/pen/PobwReK)
 * `gap/grid-gap` 中 y 轴若为百分比，会以宽度为准，且不会撑起高度
 * 在省略样式处创建层叠上下文，会未被省略，但表现很奇特，[案例](https://codepen.io/foreverZ133/pen/oNzdYXZ)
