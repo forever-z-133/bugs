@@ -4,6 +4,7 @@
 
 # 记录一些坑眼
 
+* jquery 中 `html('<p><p>1</p></p>')` 会奇怪地得到 `<p></p><p>1</p><p></p>`
 * js 中 `??` 属于低优先级，比如 `1 + undefined ?? 0` 会得到 `NaN`，在 dart 中也是
 * `bind` 修改后无法再次修改 `this`，因此诞生了软绑定 `softBind`，[案例](https://codepen.io/foreverZ133/pen/PobwReK)
 * `gap/grid-gap` 中 y 轴若为百分比，会以宽度为准，且不会撑起高度
@@ -108,7 +109,6 @@
 
 -----
 
-* 给 `option` 设 `label` 而不写在标签内，部分苹果机会不显示文本
 * 在 vue 的根节点进行 `innerHTML += 'x'` 会造成 vue-router 失效，`appendChild` 是 OK 的
 * `input[type="checkbox"]` 加字符串 `checked="false"` 或 `setAttribute('checked', '')` 也会勾选
 * html 中 `data-userId` 会显示为全小写 `data-userid`，但 `attr('data-USERID')` 不区分大小写都能获取到
@@ -126,7 +126,6 @@
 * ueditor 插件初始化时会触发 `hashchange` 事件，希望你在这里面没有写什么操作
 * `display: flex` 和子级 `margin: auto;` 合用时，效果很奇妙，比如居中/两个子级的自动空隙等
 * `<script src="xx.js" />` 不能使用单标签格式，不然会把后面的都当做文本
-* 属性选择器 `[id=value]` 中当 value 中有小数点时会报错，保险起见还是带双引号更好 `[id="value"]`
 * 属性选择器 `[id=value]` 中当 value 中有小数点时会报错，保险起见还是带双引号更好 `[id="value"]`
 * 小程序覆盖在 input 上的元素，键盘弹起后，点击就无法触发了
 * ElementUI 的 `el-date-picker[type="daterange"]` 在 **火狐** 下不支持 `yyyy.MM.dd` 格式数据的传入，`-/` 可以
@@ -154,7 +153,6 @@
 * `Math.round` 四舍五入方法可能有误，见 [推文](https://mp.weixin.qq.com/s/MlnVE0_bWHVGb7MAPBBG1Q)
 * 看 [源码](https://blog.csdn.net/lixuepeng_001/article/details/53742589) 发现，`Array.sort` 是要返回正负，而非布尔值
 * 浏览器开始禁止音频视频的自动播放，暂时无解
-* `<a><a>x</a></a>` 会被解析为 `<a></a><a>x</a>`，但 `append` 的话可以嵌套， p>div | p>p 也是如此。
 * jquery 在 table 中 html 个 table 会无效，append 个 table 有时报错，[源码](https://blog.csdn.net/chaiyining007/article/details/8213699)。
 * `location.origin` 在 IE11 以下不兼容
 
@@ -215,7 +213,7 @@
 * `absolute` 下的 `offsetLeft` 会以父级定位的相对位置来计算（可能有误，以后研究）
 * `Object.assign` 的 `this` 指向有待研究
 * 移动端同个 `input[type="file"]` 的 change 事件只触发一次
-* if lt IE 只能判断到 9，10及10以上及edge都无效
+* if lt IE 只能判断到 9，10+ 及 edge 都无效
 * sourceTree 上传，大小写不区分，比如 Index 和 index
 * `touchend` 时 `e.touches` 是已经不存在了的
 * canvas 的 `globalAlpha` 小于 0 时会按 1 来计算
