@@ -4,7 +4,11 @@
 
 # 记录一些坑眼
 
+* CocosCreator 英文版时没有腾讯云的服务项 (版本 2.4.4)，需切为中文版
 * jquery 中 `html('<p><p>1</p></p>')` 会奇怪地得到 `<p></p><p>1</p><p></p>`
+
+-----
+
 * js 中 `??` 属于低优先级，比如 `1 + undefined ?? 0` 会得到 `NaN`，在 dart 中也是
 * `bind` 修改后无法再次修改 `this`，因此诞生了软绑定 `softBind`，[案例](https://codepen.io/foreverZ133/pen/PobwReK)
 * `gap/grid-gap` 中 y 轴若为百分比，会以宽度为准，且不会撑起高度
