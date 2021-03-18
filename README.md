@@ -4,7 +4,8 @@
 
 # 记录一些坑眼
 
-* cocos 中，zIndex 会使其在 Layout 布局中渲染排序改变
+* cocos 的两个元素碰撞，触发 `onCollisionEnter` 的先后顺序为节点顺序，拖谁撞谁需自行处理
+* cocos 中，`zIndex` 会使其在 `cc.Layout` 布局中渲染排序改变
 * 部分浏览器不支持 `opacity` 为百分比值 `5%`，最好转为小数 `0.5`
 * CocosCreator 英文版时没有腾讯云的服务项 (版本 2.4.3)，需切为中文版
 * jquery 中 `html('<p><p>1</p></p>')` 会奇怪地得到 `<p></p><p>1</p><p></p>`
