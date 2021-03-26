@@ -4,6 +4,7 @@
 
 # 记录一些坑眼
 
+* 父级 `background-clip: text; color: transparent;` 而子级文本 `transform` 会造成文本隐藏，[案例](https://codepen.io/zaneon/pen/yLgeZNa)
 * cocos 的两个元素碰撞，触发 `onCollisionEnter` 的先后顺序为节点顺序，拖谁撞谁需自行处理
 * cocos 中，`zIndex` 会使其在 `cc.Layout` 布局中渲染排序改变
 * 部分浏览器不支持 `opacity` 为百分比值 `5%`，最好转为小数 `0.5`
