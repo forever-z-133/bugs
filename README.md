@@ -4,6 +4,7 @@
 
 # 记录一些坑眼
 
+* `antd-mobile` 的 `Slider` 组件，当值范围很大时，滑杆的点击极容易触发滑动，不甚推荐这样的交互
 * 在 `mounted` 周期中依旧可能 `query` 不到元素，还是在 `ref` 周期中保险一些
 * 正则 `/^[23-69]$/` 实则是匹配 `2` `3-6` `9`，所以 `.test('50')` 为 `false`
 * 父级 `background-clip: text; color: transparent;` 而子级文本 `transform` 会造成文本隐藏，[案例](https://codepen.io/zaneon/pen/yLgeZNa)
