@@ -12,7 +12,6 @@
 * `antd-mobile` 的 `Slider` 组件，当值范围很大时，滑杆的点击极容易触发滑动，不甚推荐这样的交互
 * 在 `mounted` 周期中依旧可能 `query` 不到元素，还是在 `ref` 周期中保险一些
 * 正则 `/^[23-69]$/` 实则是匹配 `2` `3-6` `9`，所以 `.test('50')` 为 `false`
-* 父级 `background-clip: text; color: transparent;` 而子级文本 `transform` 会造成文本隐藏，[案例](https://codepen.io/zaneon/pen/yLgeZNa)
 * cocos 的两个元素碰撞，触发 `onCollisionEnter` 的先后顺序为节点顺序，拖谁撞谁需自行处理
 * cocos 中，`zIndex` 会使其在 `cc.Layout` 布局中渲染排序改变
 * 部分浏览器不支持 `opacity` 为百分比值 `5%`，最好转为小数 `0.5`
