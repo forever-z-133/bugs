@@ -8,6 +8,7 @@
 
 -----
 
+* `mouseout` 绑在父级，进出子级也会触发，有点难用
 * `translate(50px)` 相当于 `translate(50px, 0)`，而 `scale(1.5)` 相当于 `scale(1.5, 1.5)`，需区分
 * `antd-mobile` 的 `Slider` 组件，当值范围很大时，滑杆的点击极容易触发滑动，不甚推荐这样的交互
 * 在 `mounted` 周期中依旧可能 `query` 不到元素，还是在 `ref` 周期中保险一些
