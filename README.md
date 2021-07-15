@@ -4,6 +4,7 @@
 
 # 记录一些坑眼
 
+* React 的 `<>{content}</>` 会删掉 `\r` 换行，在 `renderToString` 时不会删掉，需规避
 * `react-color` 插件在 iframe 中 `click-outside` 交互会报错，在使用其他插件时也需注意此场景
 * 腾讯云图片资源压缩，若压缩后尺寸小于 `1px` 会压缩失败，[案例](https://image-1304214004.file.myqcloud.com/88166299-d694-4d34-ad3a-501424df511d06839243223985665.png?imageMogr2/thumbnail/!60p)，[文档](https://cloud.tencent.com/document/product/460/36540)
 * 当子级高度大于父级固定高度时，父级弹性容器会考虑换行，[案例](https://codepen.io/foreverZ133/pen/zYZQpgx)
