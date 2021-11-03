@@ -4,6 +4,7 @@
 
 # 记录一些坑眼
 
+* 在子级高度超过父级高度时，`align-items` 和 `align-content` 表现不一致，[案例](https://codepen.io/foreverZ133/pen/wvqpvKj)
 * React 的 `style` 对象顺序不同可能造成渲染结果不同，[案例](https://codesandbox.io/s/object-sort-exy2l)
 * 安卓机发朋友圈时，纯色图或小图会不出现在选择列表中
 
