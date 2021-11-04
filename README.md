@@ -4,6 +4,7 @@
 
 # 记录一些坑眼
 
+* 当父级高度小于其行高时，子级行块元素的 `vertical-align: middle` 会造成父级上方有空隙，[案例](https://codepen.io/foreverZ133/pen/QWMQLEd)
 * JSX 中在 `map` 内进行判断渲染，未渲染的节点会有空 `key` 的报错，最好先 `filter`，[案例](https://codepen.io/foreverZ133/pen/QWMaNYr)
 * React 的 `style` 对象顺序不同可能造成渲染结果不同，[案例](https://codesandbox.io/s/object-sort-exy2l)
 * 安卓机发朋友圈时，纯色图或小图会不出现在选择列表中
