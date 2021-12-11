@@ -4,11 +4,12 @@
 
 # 记录一些坑眼
 
+* 部分苹果机小程序不支持 `scale(-1, 1)` 负值，可用 `transform(-1, 0, 0, 1, 0, 0)` 替换
 * `Taro.nextTick` 有概率不触发回调，而 `wx.nextTick` 不会，推荐根据环境采用后者
 * 小程序 `canvasPutImageData` 的位置尺寸必须为整数，否则会报 `invalid data format`
 * 小程序 `Button` 数字是非衬线汉字是衬线，与 `View` 的表现不一致，可加 `lang='zh_CN'` 来处理
 * 当父级高度小于其行高时，子级行块元素的 `vertical-align: middle` 会造成父级上方有空隙，[案例](https://codepen.io/foreverZ133/pen/QWMQLEd)
-* JSX 中在 `map` 内进行判断渲染，未渲染的节点会有空 `key` 的报错，最好先 `filter`，[案例](https://codepen.io/foreverZ133/pen/QWMaNYr)
+* JSX 中在 `map` 内进行判断渲染，未渲染的节点会有空 `key` 的报错，最好采用 `Fragment` 做空节点，[案例](https://codepen.io/foreverZ133/pen/QWMaNYr)
 * React 的 `style` 对象顺序不同可能造成渲染结果不同，[案例](https://codesandbox.io/s/object-sort-exy2l)
 * 安卓机发朋友圈时，纯色图或小图会不出现在选择列表中
 
