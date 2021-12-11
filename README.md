@@ -4,6 +4,7 @@
 
 # 记录一些坑眼
 
+* `Taro.nextTick` 有概率不触发回调，而 `wx.nextTick` 不会，推荐根据环境采用后者
 * 小程序 `canvasPutImageData` 的位置尺寸必须为整数，否则会报 `invalid data format`
 * 小程序 `Button` 数字是非衬线汉字是衬线，与 `View` 的表现不一致，可加 `lang='zh_CN'` 来处理
 * 当父级高度小于其行高时，子级行块元素的 `vertical-align: middle` 会造成父级上方有空隙，[案例](https://codepen.io/foreverZ133/pen/QWMQLEd)
