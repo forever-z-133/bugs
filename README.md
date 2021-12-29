@@ -4,6 +4,7 @@
 
 # 记录一些坑眼
 
+* 当 `inline` 搭配 `font-size: 0` 时该元素宽高为 0，而 `inline-block` 还是会被子级撑起宽高，[案例](https://codepen.io/foreverZ133/pen/XWeZKOz)
 * 部分苹果机小程序不支持 `scale(-1, 1)` 负值，可用 `transform(-1, 0, 0, 1, 0, 0)` 替换
 * `Taro.nextTick` 有概率不触发回调，而 `wx.nextTick` 不会，推荐根据环境采用后者
 * 小程序 `canvasPutImageData` 的位置尺寸必须为整数，否则会报 `invalid data format`
