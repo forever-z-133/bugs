@@ -4,6 +4,7 @@
 
 # 记录一些坑眼
 
+* 页面使用 `onbeforeunload` 做跳转拦截后，但普通的跳页也会拦截，故而需特殊处理，[案例](https://test.forever-z.cn/others/funny/onbeforeunload.html)
 * `uni-app` 的 `class A exnteds B` 中的 `B` 在企微模式下不能为函数，比如 `Promise` 需嵌套成 `class MyPromise`
 * `uni-app` 中 `:key="a+b"` 这类表达式在小程序模式下不被支持
 
