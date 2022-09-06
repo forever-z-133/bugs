@@ -4,6 +4,7 @@
 
 # 记录一些坑眼
 
+* `glob('aa/**/bb')` 不支持 windows，需改为 `glob('**/xx', { cwd: 'aa' })`
 * `uni-app` 在 H5 平台 `v-for="item in 10"` 中 `item` 从 `1` 开始，其他平台从 `0` 开始，需改用 `index`
 * 页面使用 `onbeforeunload` 做跳转拦截后，但普通的跳页也会拦截，故而需特殊处理，[案例](https://test.forever-z.cn/others/funny/onbeforeunload.html)
 * `uni-app` 的 `class A exnteds B` 中的 `B` 在企微模式下不能为函数，比如 `Promise` 需嵌套成 `class MyPromise`
