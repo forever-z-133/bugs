@@ -4,6 +4,9 @@
 
 # 记录一些坑眼
 
+* 图片拖拽不要缩略图一般用 `draggable="false"` 或 `-webkit-user-drag: none;` 处理，但其他元素拖拽区域重叠会使其无效
+* 若 `dragstart` 中有 `preventDefault` 将不触发 `dragend` 和 `drop`
+* `drop` 事件必须 `dragover` 中有 `preventDefault` 才可触发
 * 遇到 `trim` 不掉的空格，可能是遇到了 `\u00A0` 需要 `replaceAll` 掉
 * `glob('aa/**/bb')` 不支持 windows，需改为 `glob('**/xx', { cwd: 'aa' })`
 * `uni-app` 在 H5 平台 `v-for="item in 10"` 中 `item` 从 `1` 开始，其他平台从 `0` 开始，需改用 `index`
