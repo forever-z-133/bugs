@@ -4,6 +4,7 @@
 
 # 记录一些坑眼
 
+* 直接访问资源然后刷新不会使用缓存，作为内链刷新才会使用缓存
 * 图片拖拽不要缩略图一般用 `draggable="false"` 或 `-webkit-user-drag: none;` 处理，但其他元素拖拽区域重叠会使其无效
 * 若 `dragstart` 中有 `preventDefault` 将不触发 `dragend` 和 `drop`
 * `drop` 事件必须 `dragover` 中有 `preventDefault` 才可触发
