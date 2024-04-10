@@ -4,8 +4,12 @@
 
 # 记录一些坑眼
 
+* mac 的 `node_modules/.bin` 中是软链接，所以拷贝 `node_modules` 给 windows 用会找不到指令
 * ``axios.get(`/api?n=${n}`)`` 当 `n` 带有特殊符号 `#?` 时会有错误，故采用 `axios.get('/api', { params: { n } })` 更佳
 * 例如 `decodeUriComponent('%st%C3%A5le%')` 还是会报错的，特别场景可使用 `decode-uri-component` 的包
+
+-----
+
 * 直接访问资源然后刷新不会使用缓存，作为内链刷新才会使用缓存
 * 图片拖拽不要缩略图一般用 `draggable="false"` 或 `-webkit-user-drag: none;` 处理，但其他元素拖拽区域重叠会使其无效
 * 若 `dragstart` 中有 `preventDefault` 将不触发 `dragend` 和 `drop`
