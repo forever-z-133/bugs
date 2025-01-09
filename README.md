@@ -4,6 +4,7 @@
 
 # 记录一些坑眼
 
+* TDesign 的 `t-pagination` 使用 `defaultPageSize` 搭配 `total` 并动态修改 `total` 不生效，需使用 `pageSize`
 * Vue3 中 `const formData = reactive({})` 传给子组件 `v-model="formData"` 有概率打包报错，所以仅能使用 `ref`
 * 当存在 `meta[http-equiv="Content-Security-Policy"]` 时 `[preload]` 属性会失效，可换用 `http header` 方式
 * mac 的 `node_modules/.bin` 中是软链接，所以拷贝 `node_modules` 给 windows 用会找不到指令
