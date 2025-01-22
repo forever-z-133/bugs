@@ -4,6 +4,7 @@
 
 # 记录一些坑眼
 
+* HTML 中设置 `[dragable]` 仅图片可触发拖拽，设为 `[dragable="true"]` 才是整个元素可拖拽，[案例](https://codepen.io/foreverZ133/pen/GgKYJOO)
 * TDesign 的 `t-pagination` 使用 `defaultPageSize` 搭配 `total` 并动态修改 `total` 不生效，需使用 `pageSize`
 * Vue3 中 `const formData = reactive({})` 传给子组件 `v-model="formData"` 有概率打包报错，所以仅能使用 `ref`
 * 当存在 `meta[http-equiv="Content-Security-Policy"]` 时 `[preload]` 属性会失效，可换用 `http header` 方式
